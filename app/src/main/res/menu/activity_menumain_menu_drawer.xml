@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <item android:title="menu">
+        <group>
+            <item android:id="@+id/nav_item_one"
+                  android:icon="@drawable/ic_profile"
+                  android:title="Profile"
+
+            />
+            <item android:id="@+id/nav_item_two"
+                  android:icon="@drawable/ic_projects"
+                  android:title="Projects" />
+            <item android:id="@+id/nav_item_three"
+                  android:icon="@drawable/ic_pengajuan_black"
+                  android:title="Pengajuan" />
+            <item android:id="@+id/nav_item_four"
+                  android:icon="@drawable/ic_changepassword_black"
+                  android:title="Change Password" />
+            <item android:id="@+id/nav_item_five"
+                  android:icon="@drawable/ic_logout_black"
+                  android:title="Log Out" />
+        </group>
+    </item>
+</menu>

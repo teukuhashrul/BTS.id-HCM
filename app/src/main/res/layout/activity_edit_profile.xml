@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black_test"
+        tools:context=".ui.editProfile.EditProfile_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/toolbar_transparent"
+
+>
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/editProfile_Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Edit Profile"
+                android:theme="@style/Toolbar"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                app:titleTextColor="@color/white"
+        >
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_edit_profile"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
