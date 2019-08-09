@@ -30,6 +30,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
+import android.graphics.BitmapFactory
+import android.util.Base64
+import android.util.Log
+import java.io.ByteArrayOutputStream
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -61,6 +65,8 @@ class Profile_Fragment : Fragment() {
     private val GALLERY = 1
     private val CAMERA = 2
 
+
+    private var encodedImage: String = "a"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -157,6 +163,7 @@ class Profile_Fragment : Fragment() {
             }
         }
         pictureDialog.show()
+
     }
 
     /**
@@ -181,6 +188,7 @@ class Profile_Fragment : Fragment() {
         ) {
             startActivityForResult(intent, CAMERA)
         }
+
     }
 
     /**
@@ -195,6 +203,17 @@ class Profile_Fragment : Fragment() {
                 try {
                     // get data from the picked photo
                     val bitmap = MediaStore.Images.Media.getBitmap(activity?.contentResolver, contentURI)
+
+
+                    val baos = ByteArrayOutputStream()
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos) //bm is the bitmap object
+                    val byteArray = baos.toByteArray()
+                     val new_EncodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+//
+                    encodedImage = new_EncodedImage
+                    Toast.makeText(context , "BASE64:  $new_EncodedImage" , Toast.LENGTH_LONG).show()
+                    Log.d("base64" , new_EncodedImage)
+                    //
                     // save to the local directory
                     // val path = saveBitmap(bitmap)
                     // change profile picture with the newest pic picked from the result

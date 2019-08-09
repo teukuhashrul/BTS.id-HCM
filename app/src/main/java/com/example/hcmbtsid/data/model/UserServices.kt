@@ -14,10 +14,18 @@ interface UserServices {
 
 
     @GET("karyawan/{nip}")
-    fun getKaryawanById(@Path("nip") nip: Int): Call<Karyawan>
+    fun getKaryawanById(
+//      @Header("nip") nip:Int
+        @Path("nip") nip: Int): Call<Karyawan>
+
+    @PUT("editprofile/{nip}")
+    fun editKaryawan(@Path("nip") nip: Int , @Body karyawan: Karyawan): Call<Karyawan>
 
 
     @POST("/login")
     @FormUrlEncoded
     fun loginKaryawan(@Field("email")email: String, @Field("password") password:String): Call<Karyawan>
+
+
+
 }
