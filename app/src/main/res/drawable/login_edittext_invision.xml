@@ -4,13 +4,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android">
     <corners
             android:radius="17.5dp" />
-    <gradient
-            android:angle="0"
-            android:endColor="#FFB22025"
-            android:startColor="#FF7C131B"
-            android:type="linear" />
     <size
             android:height="35dp"
             android:width="280dp" />
-
+    <solid
+            android:color="#0DFFFFFF" />
 </shape>

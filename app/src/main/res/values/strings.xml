@@ -10,7 +10,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>v
     <string name="forgot_password">
-        <u>forgot password</u>
+        <u>Forgot Password ?</u>
     </string>
     <string name="prompt_nip">NIP</string>
     <string name="navigation_drawer_open">Open Drawer</string>
@@ -27,4 +27,7 @@
     <string name="item_ProjectName">PT GasEmas</string>
     <string name="title_activity_project_detail_">ProjectDetail_Activity</string>
     <string name="project_detail">Project Detail</string>
+    <string name="login_text">Login</string>
+    <string name="change_password">Change Password</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>

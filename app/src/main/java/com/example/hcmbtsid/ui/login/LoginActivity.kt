@@ -17,7 +17,7 @@ import android.widget.*
 import com.example.hcmbtsid.R
 import com.example.hcmbtsid.data.model.Karyawan
 import com.example.hcmbtsid.repository.DataRepository
-import com.example.hcmbtsid.ui.forgotPassword.ForgotPassword
+import com.example.hcmbtsid.ui.changePassword.ChangePassword
 import com.example.hcmbtsid.ui.menu.Menumain_Activity
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         // change activity
         val forgotPassword_tv = findViewById<TextView>(R.id.forgotpassword)
         forgotPassword_tv.setOnClickListener(){
-            val i = Intent(this, ForgotPassword::class.java)
+            val i = Intent(this, ChangePassword::class.java)
             i.putExtra("MANTAP" , 1)
             callForgot(i)
         }

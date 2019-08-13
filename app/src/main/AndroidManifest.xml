@@ -3,16 +3,23 @@
           package="com.example.hcmbtsid">
     <!-- Manifest for Camera Access -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!--Manifest for Internet Access-->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- Manifest for Internet Access -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="true"
-            android:icon="@drawable/bts_logo"
+            android:icon="@drawable/logo_bts_id_invision"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
+            android:roundIcon="@drawable/logo_bts_id_invision"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity
                 android:name=".ui.projectDetail.ProjectDetail_Activity"
                 android:label="@string/title_activity_project_detail_"
@@ -24,16 +31,11 @@
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ui.login.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <action android:name="android.intent.action.DEFAULT"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".ui.menu.Menumain_Activity">
         </activity>
-        <activity android:name=".ui.forgotPassword.ForgotPassword">
+        <activity android:name=".ui.changePassword.ChangePassword">
         </activity>
     </application>
 
