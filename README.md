@@ -6,7 +6,7 @@ This app used dummy data to login
 username : hasrul
 password : 123456 
 
-##Features## 
+## Features ## 
 - Login
 - Forgot Password 
 - Profile 
@@ -15,14 +15,14 @@ password : 123456
 - Change Password 
 - Edit profile 
 
-Tech used in this projects 
+## Tech used in this projects 
 - Android Studio 
 - Kotlin 
 - min sdk Version 15 
 - Target sdk Version 29 
 
 
-Libraries Used in this projects 
+## Libraries Used in this projects 
 - Recycler View (for list) 
 - Circular Image View (for profile)
 - Retrofit (API data get / post / put request)
